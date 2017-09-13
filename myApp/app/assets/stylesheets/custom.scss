@@ -59,3 +59,19 @@ body {margin:0;}
   background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
+body {
+      background: url(/assets/bg17.jpg) no-repeat center center fixed; 
+
+
+}
+label{
+  font-size:1.6em;
+}
+#gallery-div{
+  margin-top:0.5em;
+}
+#inner_div, #gallerys, #inner_div { 
+    max-width: 100%; 
+    height: auto !important; 
+    width: auto !important; 
+}

@@ -1,92 +1,76 @@
-
-<div class="page">
-	<div class="main_container">
-	<div class="see_previous"><img src="/assets/left_arrow.png" class="arrow_previous"></div> 
-	<div class="see_next"><img src="/assets/left_arrow.png" class="arrow_next"></div> 
-		<div class="long_container">
-			<div class="item" id="one"> </div>
-			<div class="item" id="two"> </div>
-			<div class="item" id="three"> </div>
-			<div class="item" id="four"> </div>
-			<div class="item" id="five"> </div>
-			<div class="item" id="six"> </div>
-			<div class="item" id="seven"> </div>
-			<div class="item" id="eight"> </div>
-			<div class="item" id="nine"> </div>
-	<!-- 		<div class="item" id="ten"> </div>
-			<div class="item" id="eleven"> </div>
-			<div class="item" id="twelve"> </div>
-			<div class="item" id="thirteen"> </div>
-			<div class="item" id="fourteen"> </div>
-			<div class="item" id="fifteen"> </div>
-			<div class="item" id="sixteen"> </div>
-			<div class="item" id="seventeen"> </div>
-			<div class="item" id="eighteen"> </div>
-			<div class="item" id="nineteen"> </div>
-			<div class="item" id="twenty"> </div> -->
-
+<div class="container">
+<br>
+<br>
+	<div class="gallery">
+		<div class="row" >
+		<div class="col-lg-3"  >
+			<a href="/assets/01.jpg" data-title= "My first caption" data-lightbox="Vacation"><img src="/assets/01.jpg" width="200px" class= "img-thumbnail"   /> 
+			</a>
 			</div>
-		</div>
+			<div class="col-lg-3" >
+			<a href="/assets/02.jpg" data-title= "My second caption" data-lightbox="Vacation"><img src="/assets/02.jpg" width="200px" class= "img-thumbnail"  id="gallery-div" /> 
+			</a>
+			</div>
+				<div class="col-lg-3" >
+			<a href="/assets/03.jpg" data-title= "My third caption" data-lightbox="Vacation"><img src="/assets/03.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div>
+				<div class="col-lg-3">
+			<a href="/assets/04.jpg" data-title= "My fourth caption" data-lightbox="Vacation"><img src="/assets/04.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div>
+				<div class="col-lg-3">
+			<a href="/assets/05.jpg" data-title= "My fifth caption" data-lightbox="Vacation"><img src="/assets/05.jpg" width="200px" class= "img-thumbnail"  id="gallery-div"/> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/06.jpg" data-title= "My sixth caption" data-lightbox="Vacation"><img src="/assets/06.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/07.jpg" data-title= "My seventh caption" data-lightbox="Vacation"><img src="/assets/07.jpg" width="200px" class= "img-thumbnail"  id="gallery-div" /> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/08.jpg" data-title= "My eighth caption" data-lightbox="Vacation"><img src="/assets/08.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/09.jpg" data-title= "My ninth caption" data-lightbox="Vacation"><img src="/assets/09.jpg" width="200px" class= "img-thumbnail"  id="gallery-div" /> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/10.jpg" data-title= "My tenth caption" data-lightbox="Vacation"><img src="/assets/10.jpg" width="200px" class= "img-thumbnail"  id="gallery-div" /> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/11.jpg" data-title= "My eleventh caption" data-lightbox="Vacation"><img src="/assets/11.jpg" width="200px" class= "img-thumbnail"  id="gallery-div"/> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/12.jpg" data-title= "My twelfth caption" data-lightbox="Vacation"><img src="/assets/12.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/13.jpg" data-title= "My thirteenth caption" data-lightbox="Vacation"><img src="/assets/13.jpg" width="200px" class= "img-thumbnail"  id="gallery-div"/> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/14.jpg" data-title= "My fourteenth caption" data-lightbox="Vacation"><img src="/assets/14.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/15.jpg" data-title= "My fifteenth caption" data-lightbox="Vacation"><img src="/assets/15.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div>
+					<div class="col-lg-3">
+			<a href="/assets/16.jpg" data-title= "My sixteenth caption" data-lightbox="Vacation"><img src="/assets/16.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div>
+		<!-- 			<div class="col-lg-3">
+			<a href="/assets/17.jpg" data-title= "My seventeenth caption" data-lightbox="Vacation"><img src="/assets/17.jpg" width="200px" class= "img-thumbnail" id="gallery-div" /> 
+			</a>
+			</div> -->
+
 	</div>
-	<script type="text/javascript">
-	$(document).ready(function(){
-		var window_width = $(window).width();
-		var main_width = $(".main_container").width();
-		var long_container = $(".long_container");
-		var item = $(".item");
-		var slide_number = 0;
-
-		long_container.css("width" , main_width * 3.10);
-		item.css("width" , long_container.width() / 9);
-		$(".see_next").click(function(){
-			if(slide_number < 6){
-				slide_number++
-
-				if(slide_number == 6){
-					$(".see_next").animate({opacity: 0});
-				} else{
-					$(".see_next").animate({opacity: 1});
-				}
-				if(slide_number == 0){
-					$(".see_previous").animate({opacity: 0});
-				} else {
-					$(".see_previous").animate({opacity: 1});
-				}
-				var item_width = $(".item").width();
-				var pixels_moved = item_width * slide_number;
-
-				long_container.animate({
-					marginLeft: -pixels_moved
-				});
-			}
-		});
-
-
-
-		$(".see_previous").click(function(){
-			if(slide_number > 0){
-				slide_number--
-
-				if(slide_number == 0){
-					$(".see_previous").animate({opacity: 0});
-				} else{
-					$(".see_previous").animate({opacity: 1});
-				}
-				if(slide_number == 6){
-					$(".see_next").animate({opacity: 0});
-				} else {
-					$(".see_next").animate({opacity: 1});
-				}
-				var item_width = $(".item").width();
-				var pixels_moved = item_width * slide_number;
-
-				long_container.animate({
-					marginLeft: -pixels_moved
-				});
-			}
-		});
-
-	});
-
-</script>
-
+</div>
