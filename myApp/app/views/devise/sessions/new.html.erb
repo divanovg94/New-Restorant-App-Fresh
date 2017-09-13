@@ -29,6 +29,10 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) , 
   :class => 'btn btn-link pull-right' %><br />
 <% end -%>
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)  , :class => 'btn btn-link pull-right' %><br />
+<% end -%>
+<br>
         </span>
         <hr class="colorgraph">
         <div class="row">
