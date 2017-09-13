@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+
+   
+  </head>
+
+  <body>
+<div class="topnav" id="myTopnav">
+
+ <%= link_to "Home Page", new_user_session_path , class: 'nav_menu' %> 
+<%= link_to "Restorant", restorant_restorant_path, class: 'nav_menu' %> 
+ <%= link_to "Gallery", restorant_gallery_path, class: 'nav_menu' %> 
+ <%= link_to "Lunch Menu", restorant_lunch_menu_path, class: 'nav_menu' %> 
+<%= link_to "Wedding Menu", restorant_wedding_menu_path, class: 'nav_menu' %> 
+ <%= link_to "Contact", restorant_contact_path , class: 'nav_menu'%> 
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+</div>
+  <% if user_signed_in? %>
+  <div id="sign_out_div">  <%= current_user.name %> -<%= link_to 'Sign out', destroy_user_session_path, :id => 'sign_out' , :method => "delete" %> </div>
+  <br>
+  <% end %>
+<!--   <div id="current_date">
+  <h2 id="hdate"> CurrentDate: </h2> <h2 id="date"></h2> 
+  </div> -->
+    <%= yield %>
+ <script type="text/javascript">
+   $("#submit").click(function(event){
+    event.preventDefault();
+    var searchIDs = $("#find-table input:checkbox:checked").map(function(){
+      return $(this).val();
+    }).get();
+    $("#foodiwant").html(searchIDs)
+    alert(searchIDs);
+  });
+
+ $("#button-delete").click(function(event){
+  event.preventDefault();
+   $( "#foodiwant" ).empty();
+ })
+// n =  new Date();
+// y = n.getFullYear();
+// m = n.getMonth() + 1;
+// d = n.getDate();
+// document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+   </script>
+   
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+  </body>
+</html>

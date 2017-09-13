@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<div id="show">
+<p id="show_text">
+  <strong>Date:</strong>
+  <%= @post.title %>
+</p>
+
+<p id="show_text">
+  <strong>Your Order:</strong>
+  <%= @post.content %>
+</p>
+<div id="edit_back_div">
+<%= link_to 'Edit', edit_post_path(@post), class: "button_like_href",id: "button_like_href_show_edit" %> 
+<%= link_to 'Back', posts_path , class: "button_like_href", id: "button_like_href_show_back" %>
+</div>
+</div>
+ 
