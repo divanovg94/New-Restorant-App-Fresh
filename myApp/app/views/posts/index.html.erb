@@ -1,20 +1,7 @@
-
-
-<br>
-<div id="content_div">
-<div id="welcome">
 <h3>Wellcome <%= @usernamef.capitalize %>  <%=@usernamel.capitalize %> . </h3>
-</div>
-<br>
-  <div id="current_date">
-  <h3 id="hdate"> CurrentDate: </h3> <h3 id="date"></h3> 
-  </div>
-<br>
+  <h3 id="hdate"> CurrentDate: </h3> <h3 id="date"></h3>
 <div id="your_order"><h3> Your order :</h3>
 <h3 id="foodiwant" value="">You didn't order anything </h3></div>
-<br>
-
-</div>
 <div class="container">
 <div class="row" id="sdivche">
       <div class="col-md-6" id="fdivche">
@@ -25,13 +12,10 @@
            <table class="table table-hover"  >
             <thead>
               <tr>
-               <th><h2 class="order">Date</h2></th>
-      <th id="your_order"><h2 class="order">Your order</h2></th>
+               <th><h3 class="order">Date</h3></th>
+      <th id="your_order"><h3 class="order">Your order</h3></th>
        </tr>
   </thead>
-  
-  
-
   <tbody>
     <% @posts.each do |post| %>
       <tr>
@@ -54,17 +38,18 @@
 <h1><%= link_to 'Make new order', new_post_path , class: "button_like_href" , id: "make_new_order" %> </h1>
 </div>
 
-<div class="container">
-    <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>
+<div class="container" id="menu_id">
       <div class="row">
       <div class="col-md-6" id="fdivche">
         <div class="panel panel-primary">
           <div class="panel-heading" id="move_search">
-            <h3 class="panel-title">Hanami Menu</h3>
+            <h3 class="panel-title">Hanami Menu</h2>
             <div class="pull-right" >
               <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body" >
-                <i class="glyphicon glyphicon-filter"></i>
-                 
+                <h4> <i class="glyphicon glyphicon-search"></i> </h4>
+
+     
+              
               </span>
 
             </div>
@@ -76,9 +61,9 @@
           <table class="table table-hover" id="dev-table" >
             <thead>
               <tr>
-    <th><h2>Food</h2></th>
-    <th ><h2>Price</h2></th> 
-    <th id="float-onleft" ><h2>How Many</h2></th>
+    <th><h3>Food</h3></th>
+    <th ><h3>Price</h3></th> 
+    <th id="float-onleft" ><h3>How Many</h3></th>
   </tr>
   </thead>
   <tbody id="menu_tbody">
@@ -240,8 +225,14 @@
               </tr>
                      </tbody>
           </table>
-           <div class="submit_delete_buttons"> <input id="submit" type="submit" value="Submit"> 
-  <button id="button-delete" type="button">Delete!</button>  </div>
+          <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+           <input class='btn btn-lg btn-success btn-block' id="submit" type="submit" value="Submit"> 
+             </div>
+              <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+  <button  class="btn btn-lg btn-primary btn-block" id="button-delete"  type="button">Delete!</button>  
+     </div>
+       </div>
 </form>
         </div>
       </div>
