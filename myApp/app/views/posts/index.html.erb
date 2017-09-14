@@ -15,16 +15,21 @@
 <br>
 
 </div>
-<div id="div_table">
-
-<table id="order_table">
-  <thead>
-    <tr>
-      <th><h3 class="order">Date</h3></th>
-      <th><h3 class="order">Your order</h3></th>
-      <th colspan="3"></th>
-    </tr>
+<div class="container">
+<div class="row" id="sdivche">
+      <div class="col-md-6" id="fdivche">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+           <h3 class="panel-title">Your Posts</h3>
+            </div>
+           <table class="table table-hover" id="dev-table" >
+            <thead>
+              <tr>
+               <th><h2 class="order">Date</h2></th>
+      <th id="your_order"><h2 class="order">Your order</h2></th>
+       </tr>
   </thead>
+  
   
 
   <tbody>
@@ -39,6 +44,10 @@
     <% end %>
   </tbody>
 </table>
+        </div>
+      </div>
+        </div>
+  </div>
 
 <br>
 
@@ -48,10 +57,10 @@
 <div class="container">
     <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>
       <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6" id="fdivche">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Developers</h3>
+            <h3 class="panel-title">Hanami Menu</h3>
             <div class="pull-right">
               <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
                 <i class="glyphicon glyphicon-filter"></i>
@@ -66,24 +75,26 @@
             <thead>
               <tr>
     <th><h2>Food</h2></th>
-    <th><h2>Price</h2></th> 
-    <th><h2>How Many</h2></th>
+    <th ><h2>Price</h2></th> 
+    <th id="float-onleft" ><h2>How Many</h2></th>
   </tr>
   </thead>
   <tbody>
                         <tr>
-                <td>Salmon <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon"></td>
+                <td>Salmon with honey <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon"></td>
                 <td>3.50$</td>
                
-                <td><div class="input-group">
+                <td id="float-onleft">
+
+                <div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
                 <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
@@ -91,15 +102,17 @@
       </div></td>
               </tr>
                <tr>
-                <td>Apple <input class="checkbox-style" type="checkbox" name="Apple" value="Apple"></td>
+                <td>Apple with cream<input class="checkbox-style" type="checkbox" name="Apple" value="Apple"></td>
                 <td>2.40$</td>
-                <td><div class="input-group">
+                <td id="float-onleft">
+
+                <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
                 <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+          <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
           <span class="input-group-btn">
               <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
                   <span class="glyphicon glyphicon-plus"></span>
@@ -109,18 +122,114 @@
       </div></td>
               </tr>
                <tr>
-                <td>Tarator <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator"></td>
+                <td>Chicken Fricassee<input class="checkbox-style" type="checkbox" name="Pile Frikase" value="Pile Frikase"></td>
+                <td>4.60$</td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td>French fries
+ <input class="checkbox-style" type="checkbox" name="Purjeni Kartofki" value="Purjeni Kartofki"></td>
+                <td>1.80$</td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[4]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td>Barbuna with salad <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator"></td>
                 <td>0.80$</td>
                
-                <td><div class="input-group">
+                <td id="float-onleft"><div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
                 <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+          <input type="text" name="quant[5]" class="form-control input-number" value="1" min="1" max="100">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td>Soup with Beads <input class="checkbox-style" type="checkbox" name="Supa Topcheta" value="Supa Topcheta"></td>
+                <td>1.90$</td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[6]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td>Salad with Chicken<input class="checkbox-style" type="checkbox" name="Rulo Stefani" value="Rulo Stefani"></td>
+                <td>2.50$</td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[7]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[7]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[7]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td>Biscuit Cake <input class="checkbox-style" type="checkbox" name="Bob s Nadenica" value="Bob s Nadenica"></td>
+                <td>3.20$</td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[8]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[8]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[8]">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
