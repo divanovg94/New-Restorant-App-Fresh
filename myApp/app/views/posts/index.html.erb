@@ -22,7 +22,7 @@
           <div class="panel-heading">
            <h3 class="panel-title">Your Posts</h3>
             </div>
-           <table class="table table-hover" id="dev-table" >
+           <table class="table table-hover"  >
             <thead>
               <tr>
                <th><h2 class="order">Date</h2></th>
@@ -37,9 +37,9 @@
       <tr>
         <td><h3 class="order"><%= post.title %></h3></td>
         <td><h3 class="order"><%= post.content %></h3></td>
-        <td><h3 class="order"><%= link_to 'Show', post %></h3></td>
-        <td><h3 class="order"><%= link_to 'Edit', edit_post_path(post) %></h3></td>
-        <td><h3 class="order"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></h3></td>
+        <td><h3 class="order"><%= link_to 'Show', post ,id: "hover_s_e_d" %></h3></td>
+        <td><h3 class="order"><%= link_to 'Edit', edit_post_path(post) ,id: "hover_s_e_d"  %></h3></td>
+        <td><h3 class="order"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }  ,id: "hover_s_e_d"  %></h3></td>
       </tr>
     <% end %>
   </tbody>
@@ -59,12 +59,14 @@
       <div class="row">
       <div class="col-md-6" id="fdivche">
         <div class="panel panel-primary">
-          <div class="panel-heading">
+          <div class="panel-heading" id="move_search">
             <h3 class="panel-title">Hanami Menu</h3>
-            <div class="pull-right">
-              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+            <div class="pull-right" >
+              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body" >
                 <i class="glyphicon glyphicon-filter"></i>
+                 
               </span>
+
             </div>
           </div>
           <div class="panel-body">
@@ -79,7 +81,7 @@
     <th id="float-onleft" ><h2>How Many</h2></th>
   </tr>
   </thead>
-  <tbody>
+  <tbody id="menu_tbody">
                         <tr>
                 <td>Salmon with honey <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon"></td>
                 <td>3.50$</td>
@@ -253,9 +255,31 @@ m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 
+</script>
+<script>
 
+   $("#submit").click(function(event){
+    event.preventDefault();
+    var searchIDs = $("#dev-table input:checkbox:checked").map(function(){
+      return $(this).val();
+    }).get();
+    $("#foodiwant").html(searchIDs)
+    alert(searchIDs);
+  });
 
- (function(){
+ $("#button-delete").click(function(event){
+  event.preventDefault();
+   $( "#foodiwant" ).empty();
+ })
+// n =  new Date();
+// y = n.getFullYear();
+// m = n.getMonth() + 1;
+// d = n.getDate();
+// document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+
+</script>
+<script>
+(function(){
     'use strict';
   var $ = jQuery;
   $.fn.extend({
@@ -267,7 +291,7 @@ document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
                         search = $this.val().toLowerCase(), 
                         target = $this.attr('data-filters'), 
                         $target = $(target), 
-                        $rows = $target.find('tbody tr');
+                        $rows = $target.find('#menu_tbody tr');
                         
           if(search == '') {
             $rows.show(); 
@@ -276,10 +300,10 @@ document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
               var $this = $(this);
               $this.text().toLowerCase().indexOf(search) === -1 ? $this.hide() : $this.show();
             })
-            if($target.find('tbody tr:visible').size() === 0) {
+            if($target.find('#menu_tbody tr:visible').size() === 0) {
               var col_count = $target.find('tr').first().find('td').size();
               var no_results = $('<tr class="filterTable_no_results"><td colspan="'+col_count+'">No results found</td></tr>')
-              $target.find('tbody').append(no_results);
+              $target.find('#menu_tbody').append(no_results);
             }
           }
         });
@@ -377,25 +401,6 @@ $(".input-number").keydown(function (e) {
             e.preventDefault();
         }
     });
-   $("#submit").click(function(event){
-    event.preventDefault();
-    var searchIDs = $("#dev-table input:checkbox:checked").map(function(){
-      return $(this).val();
-    }).get();
-    $("#foodiwant").html(searchIDs)
-    alert(searchIDs);
-  });
-
- $("#button-delete").click(function(event){
-  event.preventDefault();
-   $( "#foodiwant" ).empty();
- })
-// n =  new Date();
-// y = n.getFullYear();
-// m = n.getMonth() + 1;
-// d = n.getDate();
-// document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-
 </script>
 
   
