@@ -3,15 +3,15 @@
 <br>
 <div id="content_div">
 <div id="welcome">
-<h1>Wellcome <%= @usernamef.capitalize %>  <%=@usernamel.capitalize %> . </h1>
+<h3>Wellcome <%= @usernamef.capitalize %>  <%=@usernamel.capitalize %> . </h3>
 </div>
 <br>
   <div id="current_date">
-  <h2 id="hdate"> CurrentDate: </h2> <h2 id="date"></h2> 
+  <h3 id="hdate"> CurrentDate: </h3> <h3 id="date"></h3> 
   </div>
 <br>
-<div id="your_order"><h2> Your order :</h2>
-<h2 id="foodiwant" value="">You didn't order anything </h2></div>
+<div id="your_order"><h3> Your order :</h3>
+<h3 id="foodiwant" value="">You didn't order anything </h3></div>
 <br>
 
 </div>
@@ -45,83 +45,97 @@
 <h1><%= link_to 'Make new order', new_post_path , class: "button_like_href" , id: "make_new_order" %> </h1>
 </div>
 
-<div id="table_menu">
-<form>
-<table id="find-table">
-  <tr>
+<div class="container">
+    <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1>
+      <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Developers</h3>
+            <div class="pull-right">
+              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                <i class="glyphicon glyphicon-filter"></i>
+              </span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+          </div>
+          <form>
+          <table class="table table-hover" id="dev-table" >
+            <thead>
+              <tr>
     <th><h2>Food</h2></th>
     <th><h2>Price</h2></th> 
     <th><h2>How Many</h2></th>
   </tr>
-  <tr>
-    <td id="food"><h2>Salmon       <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon"></h2> </td>
-    <td><h3>3.90 $</h3></td> 
-    <td id="price"><select >
-    <option value="1"><h3>1</h3></option>
-    <option value="2"><h3>2</h3></option>
-    <option value="3"><h3>3</h3></option>
-</select></td>
-  </tr>
-  <tr>
-    <td id="food"><h2>Burger     <input class="checkbox-style" type="checkbox" name="Burger" value="Burger"></h2> </td>
-   <td><h3>1.20 $</h3></td> 
-    <td id="price"><select >
-    <option value="1"><h3>1</h3></option>
-    <option value="2"><h3>2</h3></option>
-    <option value="3"><h3>3</h3></option>
-</select></td>
-  </tr>
-    <tr>
-    <td id="food"><h2>Apple      <input class="checkbox-style" type="checkbox" name="Apple" value="Apple"></h2> </td>
-   <td><h3>1.20 $</h3></td> 
-    <td id="price"><select >
-    <option value="1"><h3>1</h3></option>
-    <option value="2"><h3>2</h3></option>
-    <option value="3"><h3>3</h3></option>
-</select></td>
-  </tr>
-    <tr>
-    <td id="food"><h2>Tarator      <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator"></h2> </td>
-   <td><h3>3.90 $</h3></td> 
-    <td id="price"><select >
-    <option value="1"><h3>1</h3></option>
-    <option value="2"><h3>2</h3></option>
-    <option value="3"><h3>3</h3></option>
-</select></td>
-  </tr>
-    <tr>
-    <td id="food"><h2>Parjola     <input class="checkbox-style" type="checkbox" name="Parjola" value="Parjola"></h2> </td>
-   <td><h3>1.90 $</h3></td> 
-    <td id="price"><select >
-    <option value="1"><h3>1</h3></option>
-    <option value="2"><h3>2</h3></option>
-    <option value="3"><h3>3</h3></option>
-</select></td>
-  </tr>
-    <tr>
-    <td id="food"><h2>Musaka      <input class="checkbox-style" type="checkbox" name="Musaka" value="Musaka"></h2> </td>
-   <td><h3>2.50 $</h3></td> 
-    <td id="price"><select >
-    <option value="1"><h3>1</h3></option>
-    <option value="2"><h3>2</h3></option>
-    <option value="3"><h3>3</h3></option>
-</select></td>
-  </tr>
-    <tr>
-    <td id="food"><h2>Kebapche       <input class="checkbox-style" type="checkbox" name="Kebapche" value="Kebapche"></h2> </td>
-   <td><h3>0.80 $</h3></td> 
-    <td id="price"><select >
-    <option value="1"><h3>1</h3></option>
-    <option value="2"><h3>2</h3></option>
-    <option value="3"><h3>3</h3></option>
-</select></td>
-  </tr>
+  </thead>
+  <tbody>
+                        <tr>
+                <td>Salmon <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon"></td>
+                <td>3.50$</td>
+               
+                <td><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
 
-</table>
- <div class="submit_delete_buttons"> <input id="submit" type="submit" value="Submit"> 
+      </div></td>
+              </tr>
+               <tr>
+                <td>Apple <input class="checkbox-style" type="checkbox" name="Apple" value="Apple"></td>
+                <td>2.40$</td>
+                <td><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td>Tarator <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator"></td>
+                <td>0.80$</td>
+               
+                <td><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+                     </tbody>
+          </table>
+           <div class="submit_delete_buttons"> <input id="submit" type="submit" value="Submit"> 
   <button id="button-delete" type="button">Delete!</button>  </div>
 </form>
-</div>
+        </div>
+      </div>
+        </div>
+  </div>
 <!-- <button id="button-delete" type="button">Delete!</button> -->
 <script>
 n =  new Date();
@@ -129,6 +143,150 @@ y = n.getFullYear();
 m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+
+
+
+ (function(){
+    'use strict';
+  var $ = jQuery;
+  $.fn.extend({
+    filterTable: function(){
+      return this.each(function(){
+        $(this).on('keyup', function(e){
+          $('.filterTable_no_results').remove();
+          var $this = $(this), 
+                        search = $this.val().toLowerCase(), 
+                        target = $this.attr('data-filters'), 
+                        $target = $(target), 
+                        $rows = $target.find('tbody tr');
+                        
+          if(search == '') {
+            $rows.show(); 
+          } else {
+            $rows.each(function(){
+              var $this = $(this);
+              $this.text().toLowerCase().indexOf(search) === -1 ? $this.hide() : $this.show();
+            })
+            if($target.find('tbody tr:visible').size() === 0) {
+              var col_count = $target.find('tr').first().find('td').size();
+              var no_results = $('<tr class="filterTable_no_results"><td colspan="'+col_count+'">No results found</td></tr>')
+              $target.find('tbody').append(no_results);
+            }
+          }
+        });
+      });
+    }
+  });
+  $('[data-action="filter"]').filterTable();
+})(jQuery);
+
+$(function(){
+    // attach table filter plugin to inputs
+  $('[data-action="filter"]').filterTable();
+  
+  $('.container').on('click', '.panel-heading span.filter', function(e){
+    var $this = $(this), 
+      $panel = $this.parents('.panel');
+    
+    $panel.find('.panel-body').slideToggle();
+    if($this.css('display') != 'none') {
+      $panel.find('.panel-body input').focus();
+    }
+  });
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+$('.btn-number').click(function(e){
+    e.preventDefault();
+    
+    fieldName = $(this).attr('data-field');
+    type      = $(this).attr('data-type');
+    var input = $("input[name='"+fieldName+"']");
+    var currentVal = parseInt(input.val());
+    if (!isNaN(currentVal)) {
+        if(type == 'minus') {
+            
+            if(currentVal > input.attr('min')) {
+                input.val(currentVal - 1).change();
+            } 
+            if(parseInt(input.val()) == input.attr('min')) {
+                $(this).attr('disabled', true);
+            }
+
+        } else if(type == 'plus') {
+
+            if(currentVal < input.attr('max')) {
+                input.val(currentVal + 1).change();
+            }
+            if(parseInt(input.val()) == input.attr('max')) {
+                $(this).attr('disabled', true);
+            }
+
+        }
+    } else {
+        input.val(0);
+    }
+});
+$('.input-number').focusin(function(){
+   $(this).data('oldValue', $(this).val());
+});
+$('.input-number').change(function() {
+    
+    minValue =  parseInt($(this).attr('min')); 
+
+    maxValue =  parseInt($(this).attr('max'));
+    valueCurrent = parseInt($(this).val());
+    
+    name = $(this).attr('name');
+    if(valueCurrent >= minValue) {
+        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the minimum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    if(valueCurrent <= maxValue) {
+        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the maximum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    
+    
+});
+$(".input-number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) || 
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+   $("#submit").click(function(event){
+    event.preventDefault();
+    var searchIDs = $("#dev-table input:checkbox:checked").map(function(){
+      return $(this).val();
+    }).get();
+    $("#foodiwant").html(searchIDs)
+    alert(searchIDs);
+  });
+
+ $("#button-delete").click(function(event){
+  event.preventDefault();
+   $( "#foodiwant" ).empty();
+ })
+// n =  new Date();
+// y = n.getFullYear();
+// m = n.getMonth() + 1;
+// d = n.getDate();
+// document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+
 </script>
 
   
