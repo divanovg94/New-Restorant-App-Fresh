@@ -11,7 +11,7 @@
    
   </head>
 
-  <body>
+  <body id="bodyapp">
 <div class="topnav" id="myTopnav">
 
  <%= link_to "Home Page", new_user_session_path , class: 'nav_menu' %> 
@@ -46,9 +46,9 @@ function myFunction() {
 
 
 
+
 </script>
 
-  
-
-  </body>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</body>
 </html>

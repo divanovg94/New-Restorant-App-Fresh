@@ -5,6 +5,7 @@
 
 
 <div class="container">
+
 <div class="row" id="sdivche">
       <div class="col-md-6" id="fdivche">
         <div class="panel panel-primary">
@@ -53,11 +54,811 @@
 </div>
 </div>
 <div class="container" id="menu_id">
-      <div class="row">
+      <div class="row" id="container_row_move">
       <div class="col-md-6" id="fdivche">
         <div class="panel panel-primary">
           <div class="panel-heading" id="move_search">
-            <h3 class="panel-title">Hanami Menu</h2>
+            <h3 class="panel-title">Hanami Menu - 25.09.2017</h2>
+            <div class="pull-right" >
+              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body" >
+                <h4> <i class="glyphicon glyphicon-search"></i> </h4>
+
+     
+              
+              </span>
+
+            </div>
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+          </div>
+          <form>
+          <table class="table table-hover" id="dev-table" >
+            <thead>
+              <tr>
+    <th><h3>Food</h3></th>
+    <th ><h3>Price</h3></th> 
+    <th id="float-onleft" ><h3>How Many</h3></th>
+  </tr>
+  </thead>
+  <tbody id="menu_tbody">
+                        <tr>
+                <td><h4> Salmon with honey <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon" id="myinput" ></h4></td>
+                <td><h4>3.50$ </h4></td>
+               
+                <td id="float-onleft">
+
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4>Apple with cream<input class="checkbox-style" type="checkbox" name="Apple" value="Apple" id="myinput" > </h4></td>
+                <td><h4> 2.40$</h4> </td>
+                <td id="float-onleft">
+
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Chicken Fricassee<input class="checkbox-style" type="checkbox" name="Pile Frikase" value="Pile Frikase" id="myinput" ></h4></td>
+                <td><h4> 4.60$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td> <h4>French fries<input class="checkbox-style" type="checkbox" name="Purjeni Kartofki" value="Purjeni Kartofki" id="myinput" > </h4></td>
+                <td> <h4> 1.80$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[4]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Barbuna with salad <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator" id="myinput" ></h4></td>
+                <td> <h4> 0.80$ </h4> </td>
+               
+                <td id="float-onleft">
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[5]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>
+      </td>
+              </tr>
+               <tr>
+                <td><h4>Soup with Beads <input class="checkbox-style" type="checkbox" name="Supa Topcheta" value="Supa Topcheta" id="myinput" ></h4></td>
+                <td><h4> 1.90$ </h4> </td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[6]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Salad with Chicken<input class="checkbox-style" type="checkbox" name="Rulo Stefani" value="Rulo Stefani" id="myinput" ></h4></td>
+                <td> <h4> 2.50$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[7]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[7]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[7]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Biscuit Cake <input class="checkbox-style" type="checkbox" name="Bob s Nadenica" value="Bob s Nadenica" id="myinput" > </h4></td>
+                <td><h4> 3.20$ </h4></td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[8]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[8]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[8]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+                     </tbody>
+          </table>
+          <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+           <input class='btn btn-lg btn-success btn-block' id="submit" type="submit" value="Submit"> 
+             </div>
+              <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+  <button  class="btn btn-lg btn-primary btn-block" id="button-delete"  type="button">Delete!</button>  
+     </div>
+       </div>
+</form>
+        </div>
+      </div>
+        </div>
+  </div>
+  <div class="container" id="menu_id">
+      <div class="row" id="container_row_move">
+      <div class="col-md-6" id="fdivche">
+        <div class="panel panel-primary">
+          <div class="panel-heading" id="move_search">
+            <h3 class="panel-title">Hanami Menu - 26.09.2017</h2>
+            <div class="pull-right" >
+              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body" >
+                <h4> <i class="glyphicon glyphicon-search"></i> </h4>
+
+     
+              
+              </span>
+
+            </div>
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+          </div>
+          <form>
+          <table class="table table-hover" id="dev-table" >
+            <thead>
+              <tr>
+    <th><h3>Food</h3></th>
+    <th ><h3>Price</h3></th> 
+    <th id="float-onleft" ><h3>How Many</h3></th>
+  </tr>
+  </thead>
+  <tbody id="menu_tbody">
+                        <tr>
+                <td><h4> Salmon with honey <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon" id="myinput" ></h4></td>
+                <td><h4>3.50$ </h4></td>
+               
+                <td id="float-onleft">
+
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4>Apple with cream<input class="checkbox-style" type="checkbox" name="Apple" value="Apple" id="myinput" > </h4></td>
+                <td><h4> 2.40$</h4> </td>
+                <td id="float-onleft">
+
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Chicken Fricassee<input class="checkbox-style" type="checkbox" name="Pile Frikase" value="Pile Frikase" id="myinput" ></h4></td>
+                <td><h4> 4.60$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td> <h4>French fries<input class="checkbox-style" type="checkbox" name="Purjeni Kartofki" value="Purjeni Kartofki" id="myinput" > </h4></td>
+                <td> <h4> 1.80$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[4]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Barbuna with salad <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator" id="myinput" ></h4></td>
+                <td> <h4> 0.80$ </h4> </td>
+               
+                <td id="float-onleft">
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[5]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>
+      </td>
+              </tr>
+               <tr>
+                <td><h4>Soup with Beads <input class="checkbox-style" type="checkbox" name="Supa Topcheta" value="Supa Topcheta" id="myinput" ></h4></td>
+                <td><h4> 1.90$ </h4> </td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[6]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Salad with Chicken<input class="checkbox-style" type="checkbox" name="Rulo Stefani" value="Rulo Stefani" id="myinput" ></h4></td>
+                <td> <h4> 2.50$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[7]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[7]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[7]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Biscuit Cake <input class="checkbox-style" type="checkbox" name="Bob s Nadenica" value="Bob s Nadenica" id="myinput" > </h4></td>
+                <td><h4> 3.20$ </h4></td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[8]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[8]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[8]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+                     </tbody>
+          </table>
+          <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+           <input class='btn btn-lg btn-success btn-block' id="submit" type="submit" value="Submit"> 
+             </div>
+              <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+  <button  class="btn btn-lg btn-primary btn-block" id="button-delete"  type="button">Delete!</button>  
+     </div>
+       </div>
+</form>
+        </div>
+      </div>
+        </div>
+  </div>
+  <div class="container" id="menu_id">
+      <div class="row" id="container_row_move">
+      <div class="col-md-6" id="fdivche">
+        <div class="panel panel-primary">
+          <div class="panel-heading" id="move_search">
+            <h3 class="panel-title">Hanami Menu - 27.09.2017</h2>
+            <div class="pull-right" >
+              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body" >
+                <h4> <i class="glyphicon glyphicon-search"></i> </h4>
+
+     
+              
+              </span>
+
+            </div>
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+          </div>
+          <form>
+          <table class="table table-hover" id="dev-table" >
+            <thead>
+              <tr>
+    <th><h3>Food</h3></th>
+    <th ><h3>Price</h3></th> 
+    <th id="float-onleft" ><h3>How Many</h3></th>
+  </tr>
+  </thead>
+  <tbody id="menu_tbody">
+                        <tr>
+                <td><h4> Salmon with honey <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon" id="myinput" ></h4></td>
+                <td><h4>3.50$ </h4></td>
+               
+                <td id="float-onleft">
+
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4>Apple with cream<input class="checkbox-style" type="checkbox" name="Apple" value="Apple" id="myinput" > </h4></td>
+                <td><h4> 2.40$</h4> </td>
+                <td id="float-onleft">
+
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Chicken Fricassee<input class="checkbox-style" type="checkbox" name="Pile Frikase" value="Pile Frikase" id="myinput" ></h4></td>
+                <td><h4> 4.60$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td> <h4>French fries<input class="checkbox-style" type="checkbox" name="Purjeni Kartofki" value="Purjeni Kartofki" id="myinput" > </h4></td>
+                <td> <h4> 1.80$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[4]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Barbuna with salad <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator" id="myinput" ></h4></td>
+                <td> <h4> 0.80$ </h4> </td>
+               
+                <td id="float-onleft">
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[5]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>
+      </td>
+              </tr>
+               <tr>
+                <td><h4>Soup with Beads <input class="checkbox-style" type="checkbox" name="Supa Topcheta" value="Supa Topcheta" id="myinput" ></h4></td>
+                <td><h4> 1.90$ </h4> </td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[6]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Salad with Chicken<input class="checkbox-style" type="checkbox" name="Rulo Stefani" value="Rulo Stefani" id="myinput" ></h4></td>
+                <td> <h4> 2.50$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[7]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[7]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[7]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Biscuit Cake <input class="checkbox-style" type="checkbox" name="Bob s Nadenica" value="Bob s Nadenica" id="myinput" > </h4></td>
+                <td><h4> 3.20$ </h4></td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[8]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[8]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[8]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+                     </tbody>
+          </table>
+          <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+           <input class='btn btn-lg btn-success btn-block' id="submit" type="submit" value="Submit"> 
+             </div>
+              <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+  <button  class="btn btn-lg btn-primary btn-block" id="button-delete"  type="button">Delete!</button>  
+     </div>
+       </div>
+</form>
+        </div>
+      </div>
+        </div>
+  </div>
+  <div class="container" id="menu_id">
+      <div class="row" id="container_row_move">
+      <div class="col-md-6" id="fdivche">
+        <div class="panel panel-primary">
+          <div class="panel-heading" id="move_search">
+            <h3 class="panel-title">Hanami Menu - 28.09.2017</h2>
+            <div class="pull-right" >
+              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body" >
+                <h4> <i class="glyphicon glyphicon-search"></i> </h4>
+
+     
+              
+              </span>
+
+            </div>
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+          </div>
+          <form>
+          <table class="table table-hover" id="dev-table" >
+            <thead>
+              <tr>
+    <th><h3>Food</h3></th>
+    <th ><h3>Price</h3></th> 
+    <th id="float-onleft" ><h3>How Many</h3></th>
+  </tr>
+  </thead>
+  <tbody id="menu_tbody">
+                        <tr>
+                <td><h4> Salmon with honey <input class="checkbox-style" type="checkbox" name="Salmon" value="Salmon" id="myinput" ></h4></td>
+                <td><h4>3.50$ </h4></td>
+               
+                <td id="float-onleft">
+
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4>Apple with cream<input class="checkbox-style" type="checkbox" name="Apple" value="Apple" id="myinput" > </h4></td>
+                <td><h4> 2.40$</h4> </td>
+                <td id="float-onleft">
+
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Chicken Fricassee<input class="checkbox-style" type="checkbox" name="Pile Frikase" value="Pile Frikase" id="myinput" ></h4></td>
+                <td><h4> 4.60$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[3]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[3]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[3]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td> <h4>French fries<input class="checkbox-style" type="checkbox" name="Purjeni Kartofki" value="Purjeni Kartofki" id="myinput" > </h4></td>
+                <td> <h4> 1.80$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[4]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[4]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[4]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Barbuna with salad <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator" id="myinput" ></h4></td>
+                <td> <h4> 0.80$ </h4> </td>
+               
+                <td id="float-onleft">
+                <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[5]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[5]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+      </div>
+      </td>
+              </tr>
+               <tr>
+                <td><h4>Soup with Beads <input class="checkbox-style" type="checkbox" name="Supa Topcheta" value="Supa Topcheta" id="myinput" ></h4></td>
+                <td><h4> 1.90$ </h4> </td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[6]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[6]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[6]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Salad with Chicken<input class="checkbox-style" type="checkbox" name="Rulo Stefani" value="Rulo Stefani" id="myinput" ></h4></td>
+                <td> <h4> 2.50$ </h4> </td>
+               
+                <td id="float-onleft" ><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[7]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[7]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[7]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+               <tr>
+                <td><h4> Biscuit Cake <input class="checkbox-style" type="checkbox" name="Bob s Nadenica" value="Bob s Nadenica" id="myinput" > </h4></td>
+                <td><h4> 3.20$ </h4></td>
+               
+                <td id="float-onleft"><div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[8]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+          <input type="text" name="quant[8]" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[8]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+
+      </div></td>
+              </tr>
+                     </tbody>
+          </table>
+          <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+           <input class='btn btn-lg btn-success btn-block' id="submit" type="submit" value="Submit"> 
+             </div>
+              <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+  <button  class="btn btn-lg btn-primary btn-block" id="button-delete"  type="button">Delete!</button>  
+     </div>
+       </div>
+</form>
+        </div>
+      </div>
+        </div>
+  </div>
+  <div class="container" id="menu_id">
+      <div class="row" id="container_row_move">
+      <div class="col-md-6" id="fdivche">
+        <div class="panel panel-primary">
+          <div class="panel-heading" id="move_search">
+            <h3 class="panel-title">Hanami Menu - 29.09.2017</h2>
             <div class="pull-right" >
               <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body" >
                 <h4> <i class="glyphicon glyphicon-search"></i> </h4>
@@ -270,12 +1071,14 @@ document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
     }).get();
     $("#foodiwant").html(searchIDs)
     alert(searchIDs);
+
   });
 
  $("#button-delete").click(function(event){
   event.preventDefault();
    $( "#foodiwant" ).empty();
  })
+
 // n =  new Date();
 // y = n.getFullYear();
 // m = n.getMonth() + 1;
