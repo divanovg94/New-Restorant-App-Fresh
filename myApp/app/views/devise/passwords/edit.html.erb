@@ -1,25 +1,47 @@
-<h2>Change your password</h2>
-
+<div class="container" id="move_sign_up">   
+    <div class="row" style="margin-top:60px">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
-
-  <div class="field">
+<fieldset>
+        <h2>Change your password</h2>
+        <hr class="colorgraph">
+        <div class="form-group">
     <%= f.label :password, "New password" %><br />
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em><br />
     <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "off" , id: 'email',class: "form-control input-lg" %>
   </div>
-
-  <div class="field">
+    <div class="form-group">
     <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off" , id: 'email',class: "form-control input-lg"   %>
   </div>
+<span class="button-checkbox">
+       <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+  <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) , 
+  :class => 'btn btn-link pull-right' %><br />
+<% end -%>
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)  , :class => 'btn btn-link pull-right' %><br />
+<% end -%>
+<br>
+        </span>
+   <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
 
-  <div class="actions">
-    <%= f.submit "Change my password",{ :class => 'class-button-blue'} %>
-  </div>
+    <%= f.submit "Change my password",{ :class => 'btn btn-lg btn-success btn-block'}%>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+            <a href="/users/sign_in" class="btn btn-lg btn-primary btn-block">Back</a>
+          </div>
+           </fieldset>
 <% end %>
+      </div>
+</div>
+</div>  
 
-<%= render "devise/shared/links" %>
+
+

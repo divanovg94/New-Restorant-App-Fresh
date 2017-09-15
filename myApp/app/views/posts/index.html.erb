@@ -1,7 +1,11 @@
+<div class="container">
+
 <h3>Wellcome <%= @usernamef.capitalize %>  <%=@usernamel.capitalize %> . </h3>
-  <h3 id="hdate"> CurrentDate: </h3> <h3 id="date"></h3>
-<div id="your_order"><h3> Your order :</h3>
-<h3 id="foodiwant" value="">You didn't order anything </h3></div>
+ <h3> <h3> CurrentDate: </h3> <h3 id="date"></h3> </h3>
+<h3> Your order :</h3>
+<h3 id="foodiwant" value="">You didn't order anything </h3>
+</div>
+
 <div class="container">
 <div class="row" id="sdivche">
       <div class="col-md-6" id="fdivche">
@@ -14,6 +18,7 @@
               <tr>
                <th><h3 class="order">Date</h3></th>
       <th id="your_order"><h3 class="order">Your order</h3></th>
+      <th> 
        </tr>
   </thead>
   <tbody>
@@ -21,23 +26,34 @@
       <tr>
         <td><h3 class="order"><%= post.title %></h3></td>
         <td><h3 class="order"><%= post.content %></h3></td>
-        <td><h3 class="order"><%= link_to 'Show', post ,id: "hover_s_e_d" %></h3></td>
-        <td><h3 class="order"><%= link_to 'Edit', edit_post_path(post) ,id: "hover_s_e_d"  %></h3></td>
-        <td><h3 class="order"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }  ,id: "hover_s_e_d"  %></h3></td>
+
+        <td><h3 class="order"><%= link_to 'Show', post ,id: "hover_s_e_d", class: "btn btn-lg btn-primary btn-block" %></h3></td>
+        <td><h3 class="order"><%= link_to 'Edit', edit_post_path(post) ,id: "hover_s_e_d" ,class: "btn btn-lg btn-primary btn-block" %></h3></td>
+        <td><h3 class="order"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }  ,id: "hover_s_e_d" , class: "btn btn-lg btn-primary btn-block"  %></h3></td>
       </tr>
+
     <% end %>
   </tbody>
+
 </table>
+<div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+          <h1><%= link_to 'Make new order', new_post_path , class: "btn btn-lg btn-success btn-block" , id: "make_new_order" %> </h1>
         </div>
       </div>
+<!-- <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+           <input class='btn btn-lg btn-success btn-block' id="submit" type="submit" value="Submit"> 
+             </div>
+              <div class="col-xs-6 col-sm-6 col-md-6" id="move_buttons">
+  <button  class="btn btn-lg btn-primary btn-block" id="button-delete"  type="button">Delete!</button>  
+     </div> -->
+       </div>
+
         </div>
   </div>
-
-<br>
-
-<h1><%= link_to 'Make new order', new_post_path , class: "button_like_href" , id: "make_new_order" %> </h1>
 </div>
-
+</div>
 <div class="container" id="menu_id">
       <div class="row">
       <div class="col-md-6" id="fdivche">
@@ -151,7 +167,8 @@
                 <td>Barbuna with salad <input class="checkbox-style" type="checkbox" name="Tarator" value="Tarator"></td>
                 <td>0.80$</td>
                
-                <td id="float-onleft"><div class="input-group">
+                <td id="float-onleft">
+                <div class="input-group">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[5]">
                 <span class="glyphicon glyphicon-minus"></span>
@@ -163,8 +180,8 @@
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
-
-      </div></td>
+      </div>
+      </td>
               </tr>
                <tr>
                 <td>Soup with Beads <input class="checkbox-style" type="checkbox" name="Supa Topcheta" value="Supa Topcheta"></td>
