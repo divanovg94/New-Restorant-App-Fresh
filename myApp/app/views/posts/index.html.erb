@@ -1,10 +1,6 @@
 <h3>Wellcome <%= @usernamef.capitalize %>  <%=@usernamel.capitalize %> . </h3>
- <h3> <h3> CurrentDate: </h3> <h3 id="date"></h3> </h3>
-<h3> Your order :</h3>
-<h3 id="foodiwant" value="">You didn't order anything </h3>
-
-
-<div class="container">
+ <h2> <h3> CurrentDate: <h3 id="date"></h3> </h2> 
+<div class="container" id="menu_id">
 
 <div class="row" id="sdivche">
       <div class="col-md-6" id="fdivche">
@@ -17,7 +13,7 @@
               <tr>
                <th><h3 class="order">Date</h3></th>
       <th id="your_order"><h3 class="order">Your order</h3></th>
-      <th> 
+       <th id="your_order"><h3 class="order">Price</h3></th> 
        </tr>
   </thead>
   <tbody>
@@ -25,6 +21,7 @@
       <tr>
         <td><h3 class="order"><%= post.title %></h3></td>
         <td><h3 class="order"><%= post.content %></h3></td>
+         <td><h3 class="order"><%= post.price %></h3></td>
 
         <td><h3 class="order"><%= link_to 'Show', post ,id: "hover_s_e_d", class: "btn btn-lg btn-primary btn-block" %></h3></td>
         <td><h3 class="order"><%= link_to 'Edit', edit_post_path(post) ,id: "hover_s_e_d" ,class: "btn btn-lg btn-primary btn-block" %></h3></td>

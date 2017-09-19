@@ -13,12 +13,14 @@
      <tr>
      <th><h3 class="order">Date</h3></th>
        <th id="your_order"><h3 class="order">Order</h3></th>
+         <th id="your_order"><h3 class="order">Price</h3></th>
            </tr>
   </thead>
   <tbody>
    <tr>
    <td><h3 class="order"><%= @post.title %></h3></td>
-        <td><h3 class="order">  <%= @post.content %></h3></td></h3></td>
+        <td><h3 class="order">  <%= @post.content %></h3></td>
+        <td><h3 class="order">  <%= @post.price %></h3></td>
        <td><h3 class="order">  <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-lg btn-success btn-block",id: "button_like_href_show_edit" %> </h3></td>
  <td><h3 class="order"> <%= link_to 'Back', posts_path , class: "btn btn-lg btn-primary btn-block", id: "button_like_href_show_back" %></h3></td>
 
