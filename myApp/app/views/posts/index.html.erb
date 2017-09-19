@@ -60,30 +60,7 @@ d = n.getDate();
 document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 
 </script>
-<script>
 
-   $("#submit").click(function(event){
-    event.preventDefault();
-    var searchIDs = $("#dev-table input:checkbox:checked").map(function(){
-      return $(this).val();
-    }).get();
-    $("#foodiwant").html(searchIDs)
-    alert(searchIDs);
-
-  });
-
- $("#button-delete").click(function(event){
-  event.preventDefault();
-   $( "#foodiwant" ).empty();
- })
-
-// n =  new Date();
-// y = n.getFullYear();
-// m = n.getMonth() + 1;
-// d = n.getDate();
-// document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-
-</script>
 <script>
 (function(){
     'use strict';

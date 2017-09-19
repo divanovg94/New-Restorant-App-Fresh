@@ -43,7 +43,9 @@
 
   <%= render "layouts/footer" %> 
 <script>
-$("#datepicker").datepicker({ });
+$("#datepicker").datepicker({maxDate:'+1m +10d',
+  minDate: -10
+ });
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {

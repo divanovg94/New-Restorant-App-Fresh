@@ -5,9 +5,18 @@
   <div class="row" style="margin-top:60px">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
      </fieldset>
+     <div class="pop-outer">
+     	<div class="pop-inner">
+     	<button class="close">X</button>
+     		<h2> You can change only the Time !</h2>
+     		<br>
+     		
+     		<h3> If you want to change the food you order ,  </h3>
+     		<h3> delete your order and make new one !  </h3>
+     	</div>
+     </div>
 
-
-<h2>Editing Post</h2>
+<h2>Editing Date</h2>
 
 <%= render 'form', post: @post %>
 
@@ -15,6 +24,33 @@
 </div>
 </div>
 </div>
+<script type="text/javascript">
+	// $("#hide_this_div").hide()
+	// $("#hide_this_div_two").hide()
+
+	$('#post_content, textarea').attr('readonly','readonly');
+	$('#post_price, textarea').attr('readonly','readonly');
+
+
+</script>
+
+<script>
+$(document).ready(function(){
+	$("#post_content").click(function(){
+		$(".pop-outer").fadeIn("slow");
+	});
+	$(".close").click(function(){
+		$(".pop-outer").fadeOut("fast");
+	});
+	$("#post_price").click(function(){
+		$(".pop-outer").fadeIn("slow");
+	});
+	$(".close").click(function(){
+		$(".pop-outer").fadeOut("fast");
+	});
+});
+
+</script>
 
 
 
