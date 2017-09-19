@@ -56,11 +56,17 @@
     var searchPrice = $("#dev-table input:checkbox:checked").map(function(){
       return $(this).closest('td').siblings().find('h4').text();
     }).get();
+var fullString=""
+    for(var i=0;i<searchIDs.length;i++){
+     fullString =fullString + searchIDs[i] +" " +searchPrice[i]
+      alert(fullString);
+      
+    }
 
 
 
        $('#post_title').val($("#datepicker").val()); 
-  $('#post_content').val(searchIDs); 
+  $('#post_content').val(fullString); 
 
     $('#trigger_the_fucing_form').submit();
 
