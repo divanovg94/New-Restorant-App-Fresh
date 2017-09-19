@@ -52,7 +52,14 @@
     }).get();
     $("#foodiwant").html(searchIDs)
     alert(searchIDs);
-       $('#post_title').val(Date()); 
+     event.preventDefault();
+    var searchPrice = $("#dev-table input:checkbox:checked").map(function(){
+      return $(this).closest('td').siblings().find('h4').text();
+    }).get();
+
+
+
+       $('#post_title').val($("#datepicker").val()); 
   $('#post_content').val(searchIDs); 
 
     $('#trigger_the_fucing_form').submit();
