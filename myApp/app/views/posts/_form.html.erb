@@ -2,7 +2,7 @@
 
 
 <div id="main_edit_post">
-<%= form_with(model: post, local: true) do |form| %>
+<%= form_with(model: post, local: true,:html => { :id => "trigger_the_fucing_form"}) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -43,3 +43,26 @@
 
 
 
+<script>
+
+   $("#submit").click(function(event){
+    event.preventDefault();
+    var searchIDs = $("#dev-table input:checkbox:checked").map(function(){
+      return $(this).val();
+    }).get();
+    $("#foodiwant").html(searchIDs)
+    alert(searchIDs);
+       $('#post_title').val(Date()); 
+  $('#post_content').val(searchIDs); 
+
+    $('#trigger_the_fucing_form').submit();
+
+
+  });
+
+ $("#button-delete").click(function(event){
+  event.preventDefault();
+   $( "#foodiwant" ).empty();
+ })
+
+</script>
