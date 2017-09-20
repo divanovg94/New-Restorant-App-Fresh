@@ -49,8 +49,7 @@
 
 
 <script>
-
-   $("#submit").click(function(event){
+$("#submit").click(function(event){
     event.preventDefault();
     var searchIDs = $("#dev-table input:checkbox:checked").map(function(){
       return " " + $(this).val() + " - "  + $(this).closest('td').siblings().find('input').val()+" ";
@@ -66,10 +65,9 @@
       
 var fullString=0
     for(var i=0;i<searchIDs.length;i++){
-
-      fullString = (fullString + parseFloat(searchPrice[i].replace ("$", "")) )
+      
+     fullString = fullString + ((parseFloat(searchPrice[i].replace ("$", "")))*(parseInt(searchIDs[i].match(/[0-9]+/)[0], 10)));
     
-
       
     }
     var newfullString = ""
@@ -91,15 +89,10 @@ newfullString = newfullString + fullString.charAt(j);
   $('#post_title').val($("#datepicker").val()); 
   $('#post_content').val(searchIDs); 
   $('#post_price').val(fullString); 
-
     $('#trigger_the_fucing_form').submit();
-
-
   });
-
  $("#button-delete").click(function(event){
   event.preventDefault();
    $( "#foodiwant" ).empty();
  })
-
 </script>
