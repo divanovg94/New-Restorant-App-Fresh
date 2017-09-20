@@ -53,7 +53,7 @@
    $("#submit").click(function(event){
     event.preventDefault();
     var searchIDs = $("#dev-table input:checkbox:checked").map(function(){
-      return $(this).val() + " - "  + $(this).closest('td').siblings().find('input').val();
+      return " " + $(this).val() + " - "  + $(this).closest('td').siblings().find('input').val()+" ";
     }).get();
     $("#foodiwant").html(searchIDs)
     alert(searchIDs);

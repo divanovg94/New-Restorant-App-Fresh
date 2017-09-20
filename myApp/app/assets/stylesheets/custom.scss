@@ -255,6 +255,9 @@ margin-right:4em;
 #datepicker{
       color: #0d0d0d;
 }
+#login-padding{
+  padding-bottom:200px;
+}
 
 .pop-outer {
   display:none;
@@ -325,4 +328,12 @@ width:1000px;
 #menu_id{
   width:1000px;
 }
+}
+.logo p {
+    margin:0;
+    padding:0;
+    margin-left: 20px;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 80px;
 }

@@ -15,13 +15,12 @@ ActiveRecord::Schema.define(version: 20170919123220) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
-     t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.string "user_first_name"
     t.string "user_last_name"
-    
+    t.string "price"
   end
 
   create_table "users", force: :cascade do |t|
