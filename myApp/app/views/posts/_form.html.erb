@@ -53,7 +53,7 @@
    $("#submit").click(function(event){
     event.preventDefault();
     var searchIDs = $("#dev-table input:checkbox:checked").map(function(){
-      return $(this).val();
+      return $(this).val() + " - "  + $(this).closest('td').siblings().find('input').val();
     }).get();
     $("#foodiwant").html(searchIDs)
     alert(searchIDs);
@@ -61,6 +61,9 @@
     var searchPrice = $("#dev-table input:checkbox:checked").map(function(){
       return $(this).closest('td').siblings().find('h4').text();
     }).get();
+    event.preventDefault();
+    
+      
 var fullString=0
     for(var i=0;i<searchIDs.length;i++){
 
