@@ -1,5 +1,9 @@
+<div id="push_div"> </div>
+<div class="container" id="img_container">
+<div id="banner"> <p>Hanami</p> </div>
+</div>
 <div class="container" id ="login-padding">   
-<div class="row" style="margin-top:60px">
+<div class="row" style="margin-top:10px">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <fieldset>
@@ -51,3 +55,21 @@
   </div>
 </div>
 </div>  
+  
+  <script>
+(function($){
+  var x=0;
+  var y=0;
+  var banner = $("#banner");
+
+  banner.css("backgroundPosition", x + "px" + " " + y + "px");
+  window.setInterval(function(){
+    banner.css("backgroundPosition", x + "px" + " " + y + "px");
+    y--;
+
+
+    }, 90);
+
+}) (jQuery);
+
+  </script>

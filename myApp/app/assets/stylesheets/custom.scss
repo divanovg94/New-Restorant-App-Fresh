@@ -287,6 +287,25 @@ margin-right:4em;
 width:1300px;
  
 }
+div#banner {
+
+  width:1200px;
+  height:200px;
+  padding-left:50px;
+  padding-right:50px;
+  border-radius:10px;
+  margin:auto;
+  background:url(/assets/01.jpg) repeat 0 0;
+
+}
+#img_container{
+padding-top:1em;
+  width:1300px;
+  padding-left:250px;
+
+  
+
+}
 #fdivche{
 width:1400px;
 }
@@ -336,4 +355,33 @@ width:1000px;
     font-size: 20px;
     display: inline-block;
     line-height: 80px;
+}
+
+div#banner {
+
+  width:930px;
+  height:200px;
+  margin:auto;
+  background:url(/assets/01.jpg) repeat 0 0;
+
+}
+#img_container{
+  margin-left:1em;
+  margin-right:1em;
+}
+div#banner p {
+  font: 15px Arial, Helvetica, sans-serif;
+  color:white;
+  position:relative;
+  left:20px;
+  top:120px;
+  width:305px;
+  padding:20px;
+  background:black;
+  text-align:center;
+  text-transofrm:uppercase;
+  letter-spacing:20px;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
 }
