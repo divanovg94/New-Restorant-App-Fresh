@@ -64,7 +64,7 @@
 var fullString=0
     for(var i=0;i<searchIDs.length;i++){
 
-      fullString =fullString + Math.floor(parseFloat(searchPrice[i].replace ("$", ""))*100)/100;
+      fullString = (fullString + parseFloat(searchPrice[i].replace ("$", "")) )
     
 
       
